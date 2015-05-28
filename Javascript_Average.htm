@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<title>Javascript Average</title>
+		<script type="text/javascript">			
+			function findAverage(){
+				var myValues = [];
+				
+				myValues[0] = Math.floor(Math.random()*101);
+				myValues[1] = Math.floor(Math.random()*101);
+				myValues[2] = Math.floor(Math.random()*101);
+				myValues[3] = Math.floor(Math.random()*101);
+				myValues[4] = Math.floor(Math.random()*101);
+				
+				var myAverage = computeAverage(myValues);
+				document.writeln("The average is " + myAverage + "%");
+			}
+			
+			//function to compute average
+			function computeAverage(values){
+				var sum = 0;
+				for(i = 0; i < values.length; i++){
+					sum = sum + values[i];
+				}
+				
+				return sum/values.length;
+			}
+		</script>
+	</head>
+	<body onload="findAverage();">
+	</body>
+</html>
